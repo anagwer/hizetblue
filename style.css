@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+/* Reset & Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  image-rendering: pixelated;
+  /* Essential for crisp pixel art! */
+}
+
+body {
+  background-color: #000106;
+  color: #ffffff;
+  font-family: 'VT323', monospace;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+/* Header styling */
+header {
+  width: 100%;
+  position: relative;
+  aspect-ratio: 1 / 1;
+  max-height: 300px;
+  /* Limit height on wide screens */
+  overflow: hidden;
+}
+
+header img {
+  width: 100%;
+  object-fit: cover;
+  object-position: bottom center;
+  /* Keep character, platform & titles in view */
+  display: block;
+}
+
+/* Links List Container */
+main {
+  width: 100%;
+  max-width: 480px;
+  /* Keep buttons centered and mobile-sized */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 2;
+  flex-grow: 1; /* Pushes the footer to the bottom of the page */
+}
+
+/* Individual Link Card */
+.link-card {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  /* Match the 4500x922 aspect ratio of btn images (approx 4.88:1) */
+  aspect-ratio: 4500 / 922;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-decoration: none;
+  color: inherit;
+  padding: 0 7% 0 6%;
+  /* Relative padding to fit content inside the image frame */
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.2s ease;
+  cursor: pointer;
+
+  /* Initial state for entry animation */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideIn 0.5s ease forwards;
+}
+
+/* Hover & Active States with Pixel Animation */
+.link-card:hover {
+  transform: scale(1.03) translateY(-2px);
+  filter: drop-shadow(0 0 8px rgba(255, 85, 183, 0.6));
+}
+
+.link-card:active {
+  transform: scale(0.98) translateY(1px);
+  filter: drop-shadow(0 0 2px rgba(255, 85, 183, 0.3));
+}
+
+/* Brand Icon Wrapper */
+.icon-wrapper {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.link-card:hover .icon-wrapper {
+  transform: scale(1.1) rotate(-3deg);
+}
+
+.icon-wrapper i {
+  font-size: 22px;
+  color: #fff;
+}
+
+/* Info Section (Title & Description) */
+.info-section {
+  flex-grow: 1;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  overflow: hidden;
+}
+
+.info-section h2 {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+  transition: color 0.2s ease;
+}
+
+.info-section p {
+  font-size: 15px;
+  color: #b0b3c6;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Pixel Arrow Wrapper */
+.arrow-wrapper {
+  color: #ff55b7;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease;
+}
+
+.link-card:hover .arrow-wrapper {
+  transform: translateX(4px);
+  color: #ff85cb;
+}
+
+/* Footer styling */
+footer {
+  width: 100%;
+  aspect-ratio: 4500 / 1054; /* Exact aspect ratio of active elements (grass to bottom of bricks) */
+  overflow: hidden;
+  z-index: 1;
+}
+
+footer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  /* Keep bricks & thanks message in view */
+  display: block;
+}
+
+/* Cascade Animation for Buttons */
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 380px) {
+  .info-section h2 {
+    font-size: 10px;
+  }
+
+  .info-section p {
+    font-size: 13px;
+  }
+
+  .icon-wrapper {
+    width: 36px;
+    height: 36px;
+  }
+
+  .icon-wrapper i {
+    font-size: 18px;
+  }
+}
