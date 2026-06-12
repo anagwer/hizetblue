@@ -1,47 +1,47 @@
 // Configurations for link buttons. Easy to add, remove, and modify!
 const links = [
   {
-    title: "INSTAGRAM",
-    description: "See my photos & stories",
-    url: "https://instagram.com/",
-    iconClass: "fab fa-instagram",
-    iconBg: "linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)",
-    bgImage: "img/btn-1.png",
-    titleColor: "#ff55b7"
-  },
-  {
     title: "TIKTOK",
     description: "Short videos & content",
-    url: "https://tiktok.com/",
+    url: "https://www.tiktok.com/@hizetblue",
     iconClass: "fab fa-tiktok",
     iconBg: "#000000",
     bgImage: "img/btn-2.png",
     titleColor: "#ff55b7"
   },
   {
-    title: "TWITTER",
+    title: "INSTAGRAM",
+    description: "See my photos & stories",
+    url: "https://www.instagram.com/hlzet",
+    iconClass: "fab fa-instagram",
+    iconBg: "linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)",
+    bgImage: "img/btn-1.png",
+    titleColor: "#ff55b7"
+  },
+  {
+    title: "WA CHANNEL",
     description: "Thoughts & updates",
-    url: "https://x.com/",
-    iconClass: "fab fa-x-twitter", // FontAwesome X (Twitter) icon
-    iconBg: "#000000",
+    url: "https://www.whatsapp.com/channel/0029VbBFJN5C6ZvfZnFEnq2W",
+    iconClass: "fab fa-whatsapp", // FontAwesome X (Twitter) icon
+    iconBg: "#2AD100",
     bgImage: "img/btn-3.png",
     titleColor: "#ff55b7"
   },
   {
     title: "YOUTUBE",
     description: "Watch my videos",
-    url: "https://youtube.com/",
+    url: "https://www.youtube.com/@hlzet",
     iconClass: "fab fa-youtube",
     iconBg: "#ff0000",
     bgImage: "img/btn-1.png",
     titleColor: "#ff55b7"
   },
   {
-    title: "EMAIL",
-    description: "Let's work together",
-    url: "mailto:example@domain.com",
-    iconClass: "fas fa-envelope",
-    iconBg: "#00b050", // green color to match reference image
+    title: "MADE BY ANAGWER LUCUK",
+    description: "Let's work together With her",
+    url: "https://www.instagram.com/anagwer/",
+    iconClass: "fas fa-heart",
+    iconBg: "#E0115F", // green color to match reference image
     bgImage: "img/btn-2.png",
     titleColor: "#ff55b7"
   }
